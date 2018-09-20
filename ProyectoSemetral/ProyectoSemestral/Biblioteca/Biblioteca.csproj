@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Conexion\ConexionBD.cs" />
     <Compile Include="DAO\DAOBoleta.cs" />
-    <Compile Include="DAO\DAOCliente.cs" />
     <Compile Include="DAO\DAOColor.cs" />
     <Compile Include="DAO\DAOPersona.cs" />
     <Compile Include="ENT\Boleta.cs" />
@@ -56,11 +55,10 @@
     <Compile Include="ENT\Talla.cs" />
     <Compile Include="ENT\Tipo_producto.cs" />
     <Compile Include="ENT\Usuario.cs" />
+    <Compile Include="NEG\NEGPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SEG\Seguridad.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NEG\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

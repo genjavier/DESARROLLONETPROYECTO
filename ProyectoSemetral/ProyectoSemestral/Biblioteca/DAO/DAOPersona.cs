@@ -13,23 +13,24 @@ namespace Biblioteca.DAO
     {
         public static bool insert_persona(Persona objPersona)
         {
-            string sql = string.Format("INSERT INTO persona (" +
-                "nombre" +
-                ",apellido_parerno" +
-                ",apellido_materno" +
-                ",correo" +
-                ",telefono" +
-                ",creado" +
-                ",estado)" +
-                " values('{0}','{1}',{2}','{3}','{4}','{5}','{6}',ture)"
+            string sql = string.Format("INSERT INTO persona (id, nombre,apellido_paterno,apellido_materno, correo,telefono, creado, modificado ,eliminado,estado) values('{0}','{1}','{2}','{3}','{4}','{5}', 2018-10-22, 2018-10-22,2018-10-22,1)"
+                ,objPersona.Id
                 , objPersona.Nombre
                 , objPersona.Apellido_paterno
                 , objPersona.Apellido_materno
                 , objPersona.Correo
                 , objPersona.Telefono
-                , objPersona.Creado.Date
+               
+                //, objPersona.Creado.Date
+                         ////" values('{0}','{1}',{2}','{3}','{4}','{5}','{6}',ture)"
+                         ////, objPersona.Nombre
+                         ////, objPersona.Apellido_paterno
+                         ////, objPersona.Apellido_materno
+                         ////, objPersona.Correo
+                         ////, objPersona.Telefono
+                         ////, objPersona.Creado.Date
 
-                );         
+                         );
             Conexion.ConexionBD.getInstance().sqlExecute(sql);
 
             return true;
@@ -86,12 +87,9 @@ namespace Biblioteca.DAO
             return dt;
         }
 
-        public static DataTable busacar_persona(Persona objPersona)
+        public static DataTable busacar_persona(int id)
         {
-
-            string sql = string.Format("select * from persona" +
-                "where correo = '{0}'"
-                ,objPersona.Correo);
+            string sql = string.Format("select nombre, apellido_paterno,apellido_materno,correo,telefono  from persona");
             DataTable dt = Conexion.ConexionBD.getInstance().mySQLSelect(sql);
             return dt;
         }

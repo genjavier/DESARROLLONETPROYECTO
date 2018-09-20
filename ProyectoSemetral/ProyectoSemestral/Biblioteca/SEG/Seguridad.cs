@@ -8,9 +8,6 @@ namespace Biblioteca
 {
     public class Seguridad
     {
-        string sql=" ";
-         string conex = Conexion.ConexionBD.getInstance().sqlExecute(sql);
-
-
+        
     }
 }

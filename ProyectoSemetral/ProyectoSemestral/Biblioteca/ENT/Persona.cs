@@ -34,6 +34,16 @@ namespace Biblioteca.ENT
             this.Telefono = telefono;
         }
 
+        public Persona(int id, string nombre, string apellido_paterno, string apellido_materno, string correo, string telefono)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.apellido_paterno = apellido_paterno;
+            this.apellido_materno = apellido_materno;
+            this.correo = correo;
+            this.telefono = telefono;
+        }
+
         public Persona(int id, string nombre, string apellido_paterno, string apellido_materno, string correo, string telefono, DateTime creado, DateTime modificado, DateTime eliminado, DateTime estado)
         {
             this.id = id;

@@ -17,7 +17,7 @@ namespace Biblioteca.Conexion
 
         {
             cnn = new SqlConnection();
-            cnn.ConnectionString = "Data Source = localhost; Initial Catalog = master; Integrated Security = True";
+            cnn.ConnectionString = "Data Source=GENOMA;Initial Catalog=Ropa;Integrated Security=True";
             cnn.Open();
         }
 
@@ -45,4 +45,4 @@ namespace Biblioteca.Conexion
         }
     }
 }
-}
+

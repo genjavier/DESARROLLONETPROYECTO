@@ -62,10 +62,10 @@ namespace Biblioteca.DAO
             return true;
         }
 
-        public static bool delete_region(Region region)
+        public static bool delete_region(Boleta region)
         {
             string sql = string.Format("delete from region where id_region = {0} "
-                , region.Id_region);
+                , region.Precio_descuento);
             return true;
         }
     }

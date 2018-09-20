@@ -9,28 +9,22 @@ namespace Biblioteca.ENT
     public class Color
     {
         //id INTEGER NOT NULL,
-        private string color;       
+        private string colors;       
         private bool estado;
         private DateTime creado;
         private DateTime modificado;
         private DateTime eliminado;
 
-        public Color(string color, bool estado)
+        public Color(string colors, bool estado, DateTime creado, DateTime modificado, DateTime eliminado)
         {
-            this.Color = color;
+            this.Colors = colors;
             this.Estado = estado;
-        }
-
-        public Color(string color, bool estado, DateTime creado, DateTime modificado, DateTime eliminado)
-        {
-            this.color = color;
-            this.estado = estado;
             this.Creado = creado;
             this.Modificado = modificado;
             this.Eliminado = eliminado;
         }
 
-        public string Color { get => color; set => color = value; }
+        public string Colors { get => colors; set => colors = value; }
         public bool Estado { get => estado; set => estado = value; }
         public DateTime Creado { get => creado; set => creado = value; }
         public DateTime Modificado { get => modificado; set => modificado = value; }
