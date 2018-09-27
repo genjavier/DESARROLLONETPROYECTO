@@ -13,8 +13,8 @@ namespace Biblioteca.DAO
     {
         public static bool insert_persona(Persona objPersona)
         {
-            string sql = string.Format("INSERT INTO persona (id, nombre,apellido_paterno,apellido_materno, correo,telefono, creado, modificado ,eliminado,estado) values('{0}','{1}','{2}','{3}','{4}','{5}', 2018-10-22, 2018-10-22,2018-10-22,1)"
-                ,objPersona.Id
+            string sql = string.Format("INSERT INTO persona (nombre,apellido_paterno,apellido_materno, correo,telefono, creado, modificado ,eliminado,estado) values('{0}','{1}','{2}','{3}','{4}', null, null,null,1)"
+                
                 , objPersona.Nombre
                 , objPersona.Apellido_paterno
                 , objPersona.Apellido_materno
@@ -89,6 +89,10 @@ namespace Biblioteca.DAO
 
         public static DataTable busacar_persona(int id)
         {
+            DataTable dtDatos = new DataTable();
+
+          
+            
             string sql = string.Format("select nombre, apellido_paterno,apellido_materno,correo,telefono  from persona");
             DataTable dt = Conexion.ConexionBD.getInstance().mySQLSelect(sql);
             return dt;

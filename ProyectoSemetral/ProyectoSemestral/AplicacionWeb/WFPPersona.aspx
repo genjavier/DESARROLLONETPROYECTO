@@ -47,9 +47,6 @@
 			 <div>
 
 
-			 	<asp:ListBox ID="ListBox1" runat="server" Height="73px" Width="253px"></asp:ListBox>
-
-
 			 </div>
 			  <div>
 					<%--<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Agregar" />--%>
