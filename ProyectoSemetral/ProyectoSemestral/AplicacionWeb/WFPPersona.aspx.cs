@@ -31,7 +31,7 @@ namespace AplicacionWeb
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
 
-
+            string nombre = TextBox1.Text;
 
 
         }

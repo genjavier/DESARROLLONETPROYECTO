@@ -89,13 +89,15 @@ namespace Biblioteca.DAO
 
         public static DataTable busacar_persona(int id)
         {
-            DataTable dtDatos = new DataTable();
-
-          
+            DataTable dtDatos = new DataTable();          
             
-            string sql = string.Format("select nombre, apellido_paterno,apellido_materno,correo,telefono  from persona");
+            string sql = string.Format("select nombre, apellido_paterno,apellido_materno,correo,telefono  from persona where id ="+id );
+
             DataTable dt = Conexion.ConexionBD.getInstance().mySQLSelect(sql);
             return dt;
+
         }
+
+
     }
 }
